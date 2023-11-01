@@ -1,0 +1,12 @@
+# build / generate output
+dist/
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variable files
+.env.*
+!.env.example
+
+# JetBrains
+.run/
