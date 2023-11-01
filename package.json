@@ -2,9 +2,8 @@
   "name": "carbmee-testing",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/src/main.js",
   "scripts": {
-    "start": "tsc && node dist/src/main.js",
+    "generate": "tsc && node dist/src/generate-schema.js",
     "build": "tsc",
     "test-js": "mocha dist/**/*.spec.js",
     "test": "mocha --require ts-node/register test/**/*.spec.ts"

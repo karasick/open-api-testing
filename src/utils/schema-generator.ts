@@ -1,11 +1,14 @@
 import openapiTS from "openapi-typescript";
 import * as fs from "fs";
+import { ConfigParser } from "./config-parser";
 
 export class SchemaGenerator {
-  schemaUrl: URL;
+  schemaUrl: string;
 
-  constructor(url: string) {
-    this.schemaUrl = new URL(url);
+  constructor() {
+    const envPath = ConfigParser.getEnvPath();
+    const config = new ConfigParser(envPath);
+    this.schemaUrl = config.getOrThrow("API_OPEN_API_JSON_URL");
   }
 
   async createSchema(schemaPathName: string) {

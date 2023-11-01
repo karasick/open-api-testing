@@ -24,4 +24,9 @@ export class ConfigParser {
 
     return `${value}`;
   }
+
+  static getEnvPath(): string {
+    const nodeEnv = process.env.NODE_ENV;
+    return nodeEnv ? `.env.${nodeEnv}` : ".env";
+  }
 }
