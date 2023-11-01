@@ -6,7 +6,7 @@
     "generate": "tsc && node dist/src/generate-schema.js",
     "build": "tsc",
     "test-js": "mocha dist/**/*.spec.js",
-    "test": "mocha --require ts-node/register test/**/*.spec.ts"
+    "test": "mocha --require ts-node/register/transpile-only test/**/*.spec.ts"
   },
   "keywords": [],
   "author": "",
