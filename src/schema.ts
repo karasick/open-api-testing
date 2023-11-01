@@ -3,7 +3,6 @@
  * Do not make direct changes to the file.
  */
 
-
 export interface paths {
   "/api/v1": {
     get: operations["AppController_getHello"];
@@ -88,7 +87,7 @@ export interface components {
   schemas: {
     Category: {
       id: string;
-      externalId: string;
+      external_id: string;
       name: string;
       created_at: string;
       updated_at: string;
@@ -107,13 +106,13 @@ export interface components {
       /** @description Name of the category */
       name: string;
       /** @description External ID of the category */
-      externalId: string;
+      external_id: string;
     };
     UpdateCategoryDto: {
       /** @description Name of the category */
       name?: string;
       /** @description External ID of the category */
-      externalId?: string;
+      external_id?: string;
     };
     PaginationQuery: {
       /**
@@ -213,7 +212,6 @@ export type $defs = Record<string, never>;
 export type external = Record<string, never>;
 
 export interface operations {
-
   AppController_getHello: {
     responses: {
       200: {
@@ -250,19 +248,19 @@ export interface operations {
              *   }
              * }
              */
-            info?: ({
+            info?: {
               [key: string]: {
                 status?: string;
                 [key: string]: string | undefined;
               };
-            }) | null;
+            } | null;
             /** @example {} */
-            error?: ({
+            error?: {
               [key: string]: {
                 status?: string;
                 [key: string]: string | undefined;
               };
-            }) | null;
+            } | null;
             /**
              * @example {
              *   "database": {
@@ -292,12 +290,12 @@ export interface operations {
              *   }
              * }
              */
-            info?: ({
+            info?: {
               [key: string]: {
                 status?: string;
                 [key: string]: string | undefined;
               };
-            }) | null;
+            } | null;
             /**
              * @example {
              *   "redis": {
@@ -306,12 +304,12 @@ export interface operations {
              *   }
              * }
              */
-            error?: ({
+            error?: {
               [key: string]: {
                 status?: string;
                 [key: string]: string | undefined;
               };
-            }) | null;
+            } | null;
             /**
              * @example {
              *   "database": {

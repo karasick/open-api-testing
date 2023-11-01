@@ -2,14 +2,14 @@ import { assert } from "chai";
 import { ApiHttpClient } from "../../../src/utils/api-http-client";
 import { components } from "../../../src/schema";
 
-type CategoryList = components["schemas"]["PaginatedCategory"];
+type PaginatedCategory = components["schemas"]["PaginatedCategory"];
 
 describe("Get Categories", () => {
-  it("should return something", async () => {
+  it("should return PaginatedCategory", async () => {
     const client = new ApiHttpClient();
 
     const path = "/categories";
-    const result = await client.get<CategoryList>(path);
+    const result = await client.get<PaginatedCategory>(path);
     assert.isDefined(result);
 
     const { status, data } = result;
